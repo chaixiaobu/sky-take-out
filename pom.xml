@@ -31,6 +31,19 @@
         <jaxb-api>2.3.1</jaxb-api>
         <poi>3.16</poi>
     </properties>
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alimaven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -122,6 +135,8 @@
                 <artifactId>wechatpay-apache-httpclient</artifactId>
                 <version>0.4.8</version>
             </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 </project>
