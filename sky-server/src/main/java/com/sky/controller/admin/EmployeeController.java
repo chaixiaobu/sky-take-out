@@ -15,10 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -91,5 +88,16 @@ public class EmployeeController {
         employeeService.save(employeeDTO);
 
         return Result.success("请求成功");
+    }
+    /**
+     * 删除员工
+     * @param id
+     */
+    @ApiOperation("删除员工")
+    @DeleteMapping("/remove")
+    public Result remove (Integer id) {
+        log.info("删除员工号：{}", id);
+        employeeService.remove(id);
+        return Result.success("删除成功");
     }
 }

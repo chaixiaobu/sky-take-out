@@ -1,6 +1,7 @@
 package com.sky.mapper;
 
 import com.sky.entity.Employee;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -26,4 +27,11 @@ public interface EmployeeMapper {
     )
 
     void insert(Employee employee);
+
+    /**
+     * 删除员工
+     * @param id
+     */
+    @Delete("delete from employee where id = ${id}")
+    void delete(Integer id);
 }

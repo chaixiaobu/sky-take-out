@@ -81,4 +81,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeMapper.insert(employee);
     }
 
+    /**
+     * 删除员工
+     * @param id
+     */
+    public void remove(Integer id) {
+        employeeMapper.delete(id);
+    }
+
 }

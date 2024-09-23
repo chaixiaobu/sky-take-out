@@ -18,4 +18,10 @@ public interface EmployeeService {
      * @param employeeDTO
      */
     void save(EmployeeDTO employeeDTO);
+
+    /**
+     * 删除员工
+     * @param id
+     */
+    void remove(Integer id);
 }
